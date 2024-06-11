@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    String s1="kanak";
+    StringBuffer st=new StringBuffer();
+    System.out.println("Original string is "+s1);
+    
+    System.out.println(st.equals(st.reverse()) ? "Pallindrome" : "Not a Pallindrome");
+    
+    }
+}
