@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    int arr[]={3,4,3,7,8,3,-2,45,6,8,9,3,5,8};
+    System.out.println("Array is = "+ Arrays.toString(arr));
+    
+    int search=3;
+    int frequency=0;
+    
+    for (int i = 0; i < arr.length; i++) {
+        if(search == arr[i]){
+            frequency++;
+        }
+        
+    }
+    
+    System.out.println("Frequency of "+search+" in above array is "+frequency);
+    
+    }
+}
