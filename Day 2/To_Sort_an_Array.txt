@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    int arr[]={2,4,5,7,8,9,-2,45,6,8,9,3,5,8};
+    System.out.println("Array is = "+ Arrays.toString(arr));
+    
+    for (int i = 0; i < arr.length; i++) {
+        for (int j = i + 1; j < arr.length; j++) {
+            int tmp = 0;
+            if (arr[i] > arr[j]) {
+                tmp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = tmp;
+            }
+        }
+    }
+    
+    System.out.println("Sorted array is "+Arrays.toString(arr));
+    
+    }
+}

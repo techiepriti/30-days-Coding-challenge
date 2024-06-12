@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    int arr[]={2,4,5,7,8,9,2,45,6,8,9,3,5,8};
+    System.out.println("Array is = "+ Arrays.toString(arr));
+    int search=5;
+    int res=0;
+    
+    for(int i=0; i<arr.length; i++){
+        
+        if(search == arr[i]){
+            res=i;
+            break;
+        }
+    }
+    
+    System.out.println("Index of "+search + " is "+res);
+    
+    }
+}

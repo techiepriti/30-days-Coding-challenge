@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    int arr[]={2,4,5,7,8,9,-2,45,6,8,9,3,5,8};
+    System.out.println("Array is = "+ Arrays.toString(arr));
+    int[] rev_Arr=new int[arr.length];
+    int j=0;
+    
+    for(int i=arr.length-1; i>=0; i--, j++){
+        
+            rev_Arr[j]=arr[i];
+        
+    }
+    
+    System.out.println("Reversed array is "+Arrays.toString(rev_Arr));
+    
+    }
+}
