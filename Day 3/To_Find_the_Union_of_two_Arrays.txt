@@ -1,0 +1,32 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    //let's take two sorted arrays
+    int arr1[]={-1,0,5,6,9,11,34,68};
+    int arr2[]={-1,0,9,11,68,100,133,560};
+    System.out.println("Array1 is = "+ Arrays.toString(arr1));
+    System.out.println("Array2 is = "+ Arrays.toString(arr2));
+    
+    //To find the union of both arrays
+    
+    HashSet<Integer> union_set=new HashSet();
+    for(int i=0; i<arr1.length; i++){
+        union_set.add(arr1[i]);
+    }
+    
+    for(int j=0; j<arr2.length; j++){
+        union_set.add(arr2[j]);
+    }
+    
+    System.out.println("Union of above two Arrays is :");
+    Iterator<Integer> i=union_set.iterator();  
+           while(i.hasNext())  
+           {  
+           System.out.print(i.next()+" ");  
+           } 
+    
+    }
+}
