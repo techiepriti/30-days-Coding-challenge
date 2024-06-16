@@ -1,0 +1,64 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    // Declare an arrayList
+    ArrayList<String> al=new ArrayList<String>();
+    
+    //Add few elements
+    al.add("Mango");
+    al.add("Papaya");
+    al.add("Pomegranate");
+    al.add("Grapes");
+    al.add("Guava");
+    
+    //print elements of arraylist
+    
+    Iterator itr=al.iterator();
+    System.out.println("ArrayList 1 : ");
+    while(itr.hasNext()){
+        System.out.print(itr.next()+" ");
+    }
+    // declare an arrayList
+    ArrayList<String> al2=new ArrayList<String>();
+    
+    //Add few elements
+    al2.add("Litchi");
+    al2.add("Guava");
+    
+    System.out.println(" ");
+    System.out.println("ArrayList 2 : ");
+    for(String fruit:al2){
+        System.out.print(fruit+" ");
+    }
+    
+    //Arraylist Methods
+    
+    // System.out.println(" ");
+    // System.out.println("Intersection of both arrayList1 & arrayList2 : ");
+    // al.retainAll(al2);
+    // for(String fruit:al){
+    //     System.out.print(fruit+" ");
+    // }
+    
+    // System.out.println(" ");
+    // System.out.println("Union of both arrayList1 & arrayList2 : ");
+    // al.addAll(al2);
+    // for(String fruit:al){
+    //     System.out.print(fruit+" ");
+    // }
+    
+    //to print the size of ArrayList
+    // System.out.println(" ");
+    // System.out.println("Size of arrayList1 is : "+al.size());
+    
+    al.clear();
+    System.out.println(" ");
+    System.out.println(al);
+    
+    
+    
+    }
+}
