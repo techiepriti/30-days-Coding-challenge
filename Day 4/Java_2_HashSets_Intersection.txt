@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static void main(String args[]){
+    
+    // Declare an Hashset
+    HashSet<String> set=new HashSet<String>();
+    
+    //Add few elements
+    set.add("Hourse");
+    set.add("Cat");
+    set.add("Dog");
+    set.add("Lion");
+    set.add("Deer");
+    set.add("Cat");
+    
+    //Print the elements of Hashset list
+    
+    System.out.println("Elements of Hashset : "+set);
+    
+    // declare and add elements in HashSet 1
+    HashSet<String> set1=new HashSet<String>();
+    set1.add("Parrot");
+    set1.add("Dog");
+    set1.add("Deer");
+    System.out.println("Set1 Elements are : "+set1);
+    
+    set.retainAll(set1);
+    
+    System.out.println(" ");
+    System.out.println("Java HashSet set and set1 intersection : "+set);
+    }
+}
