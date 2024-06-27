@@ -1,0 +1,23 @@
+public class MyClass {
+    public static void main(String args[]) {
+      
+      // Outer loop to handle rows
+      for(int i=0; i<=4; i++){
+          int alphabet=65;
+          
+          //inner loop to handle coloumns
+          for(int j=4; j>=0; j--){
+              if(j<=i){
+                  
+                  //print alphabet
+                  System.out.print((char)alphabet++ +" ");
+              }
+              else{
+                  System.out.print(" ");
+              }
+          }
+          
+          System.out.println("");
+      }
+    }
+}
