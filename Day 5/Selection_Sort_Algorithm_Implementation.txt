@@ -1,0 +1,39 @@
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+      
+      // Declare an array to be sorted
+      int[] arr = {64, 25, 12, 22, 11, 45, 84, 200};
+      
+      //Outer loop to traverse the elements of the array
+      for(int i=0; i<arr.length; i++){
+          
+          int index=i, temp, min=arr[i];
+          
+          //Inner loop to find the minimum element in the rest of unsorted array
+          for(int j=i+1; j<arr.length; j++){
+    
+              if(min > arr[j]){
+                  min = arr[j];
+                  index = j;
+              }
+          }
+          
+          if(arr[i] > min){
+              temp = arr[i];
+              arr[i] = min;
+              
+              arr[index] = temp;
+              
+          }
+      }
+      
+      // Print the sorted array using Selection sort
+      
+      for(int x=0; x<arr.length; x++){
+          System.out.print(arr[x] + " ");
+      }
+      
+    }
+}
