@@ -1,0 +1,36 @@
+import java.util.*;
+
+public class MyClass {
+    public static void main(String args[]) {
+      
+      // Declare an array to be sorted
+      int[] arr = {64, 25, 12, 22, 11, 45, 84, 200};
+      
+      int temp, j;
+      
+      //Outer loop to traverse the elements of the array
+      for(int i=1; i<arr.length; i++){
+          
+          temp = arr[i];
+          j = i-1;
+          
+          // Inner loop to traverse the sorted array elements
+          while(j>=0 && temp <= arr[j]){
+              
+              arr[j+1] = arr[j];
+              
+              j = j-1;
+          }
+         
+         arr[j+1] = temp;
+         
+    }
+    
+      // Print the sorted array using Bubble sort
+      
+      for(int x=0; x<arr.length; x++){
+          System.out.print(arr[x] + " ");
+      }
+      
+    }
+}
