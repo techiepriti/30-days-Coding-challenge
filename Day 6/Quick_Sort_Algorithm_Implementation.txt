@@ -1,0 +1,60 @@
+import java.util.*;
+
+public class MyClass {
+    
+    public static int QuickPartition(int arr[], int beg, int end){
+        
+      int pivot = arr[end];
+      
+      int i = beg-1;
+      
+      for(int j = beg; j<end; j++){
+          
+          if(arr[j] < pivot){
+              
+              i++;
+              
+              int t = arr[j];
+              arr[j] = arr[i];
+              arr[i] = t;
+          }
+          
+      }
+      
+      int t = arr[i+1];
+      arr[i+1] = arr[end];
+      arr[end] = t;
+      
+      return i+1;
+      
+    }
+     
+      
+    
+    static void quickSort(int arr[], int beg, int end){
+        
+        if (beg < end){ 
+            
+        int p = QuickPartition(arr, beg, end);  
+        quickSort(arr, beg, p-1);  
+        quickSort(arr, p+1, end);  
+        } 
+    }
+    
+    
+    public static void main(String args[]) {
+      
+      // Declare an array to be sorted
+      int[] arr = {64, 25, 12, 22, 11, 45, 84, 200};
+      
+      int beg=0, end=arr.length-1;
+      
+      System.out.println("Array before Sorting : "+ Arrays.toString(arr));
+      
+      quickSort(arr, beg, end);
+      
+      System.out.println("Array After Sorting : "+ Arrays.toString(arr));
+      
+      
+    }
+}
