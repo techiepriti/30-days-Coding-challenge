@@ -1,0 +1,52 @@
+import java.util.*;
+public class MyClass {
+    
+    static int[] arrayIntersection(int arr1[], int arr2[]){
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        
+        ArrayList<Integer> result=new ArrayList<Integer>();
+        
+        for(int i=0,j=0; i<arr1.length && j<arr2.length;){
+            
+            if(arr1[i] == arr2[j]){
+                result.add(arr1[i]);
+                
+                i++;
+                j++;
+            }
+            else
+            if(arr1[i] < arr2[j]){
+                i++;
+            }
+            else
+            if(arr1[i] > arr2[j]){
+                j++;
+            }
+            
+        }
+        
+        int[] resultArr = new int[result.size()];
+        int count=0;
+        for(Integer abc : result){
+            resultArr[count] = (int) abc;
+            count++;
+        }
+        return resultArr;
+            
+    }
+    public static void main(String args[]) {
+        
+      // declare two arrays to find intersection
+      
+      int arr1[] = {2,3,4,5,6,7,4,5,7,3};
+      
+      int arr2[] = {4,6,8,0,3};
+      
+      int[] rs = arrayIntersection(arr1,arr2);
+      System.out.println("Given array 1 is : "+ Arrays.toString(arr1));
+      System.out.println("Given array 2 is : "+ Arrays.toString(arr2));
+      System.out.println("Intersection of the above two arrays is : ");
+      System.out.println(Arrays.toString(rs));
+    }
+}
