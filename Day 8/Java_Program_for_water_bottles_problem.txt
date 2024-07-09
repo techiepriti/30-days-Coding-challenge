@@ -1,0 +1,52 @@
+Problem : 
+
+There are numBottles water bottles that are initially full of water. You can exchange numExchange empty water bottles from the market with one full water bottle.
+
+The operation of drinking a full water bottle turns it into an empty bottle.
+
+Given the two integers numBottles and numExchange, return the maximum number of water bottles you can drink.
+
+Example : 
+Input : numBottles = 9, numExchange = 3
+Output :13
+Explanation : You can exchange 3 empty bottles to get 1 full water bottle.
+
+Number of water bottles you can drink : 9 + 3 + 1 = 13.
+
+Solution : in Java
+---------------------------------------------------------------------------------------------------------------------------------
+import java.util.*;
+
+public class MyClass {
+    
+    static int bottlesDrink(int b, int n){
+        
+        // initial number of bottles a person can drink is equal to number of bottles
+        int res=b;
+        
+        while(b>=n){
+            
+            int d = b/n;
+            res+=d;
+            b = b-(d*n);
+            
+        }
+        
+        return res;
+    }
+    
+    public static void main(String args[]) {
+        
+      // Declare an array with 0 values in between
+        
+      int filled_Bottles=8, exchange=3;
+      
+      System.out.println("Given number of filled bottles are :"+ filled_Bottles);
+      System.out.println("Given the exchange number is :"+ exchange);
+      
+      int result= bottlesDrink(filled_Bottles,exchange);
+
+      System.out.println("Number of Water Bottles a person can drink are = " + result);
+      
+    }
+}
