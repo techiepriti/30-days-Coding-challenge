@@ -1,0 +1,48 @@
+import java.util.*;
+
+public class Solution {
+    
+    static int binarySearch(int arr[], int beg, int end, int x){
+        
+        
+        while(beg <= end){
+        // calculate mid
+        
+        int mid = (beg+end)/2;
+        
+        if(arr[mid] == x){
+            return mid;
+        }
+        
+        if(arr[mid] < x){
+            beg = mid+1;
+        }
+        
+        if(arr[mid] > x){
+            end = mid-1;
+        }
+        
+        }
+        
+        return -1;
+    }
+
+    public static void main(String[] args) {
+            
+            // Declare an array
+            // Array has to be sorted
+            
+            int arr[]={3,5,6,7,9,11,17,45,67,89,100};
+            
+            System.out.println("Given Array is : "+Arrays.toString(arr));
+            
+            int target = 6;
+            
+            int left = 0, right = arr.length;
+            
+            int result = binarySearch(arr, left, right, target);
+            
+            System.out.println("Index of "+target+" is : "+result);
+            
+    }
+}
